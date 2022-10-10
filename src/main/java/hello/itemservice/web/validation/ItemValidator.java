@@ -13,11 +13,10 @@ public class ItemValidator implements Validator {
     @Override
     public boolean supports(Class<?> clazz) { // 넘어오는 클래스가 item or 자식클래스인지 먼저 확인
         return Item.class.isAssignableFrom(clazz);
-        // 들어오는 타입과 Item 타입이 같은지 먼저 검증
+        // 들어오는 타입과 Item 타입이 같은지 먼저 검증 후 Item 타입만 통과시킴
         // item == clazz ?
         // item == subItem ? (item의 자식클래스(subItem)도 통과시킴)
     }
-
 
     /**
      *
